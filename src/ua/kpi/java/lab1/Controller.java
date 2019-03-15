@@ -18,8 +18,8 @@ public final class Controller implements Runnable {
     view.writeln("Loaded the following data:");
     view.writeln(formatter.format(data));
 
-    Model model = new Model(data);
-    view.writeln("Enter one of the following commands:");
+    var model = new Model(data);
+    view.writeln("Start inputting one of the following commands:");
     view.writeln("\tfirst  - get all 2-year students with great marks");
     view.writeln("\tsecond - get all foreign students with intermediate marks");
     view.writeln("\t<any>  - exit");
