@@ -1,9 +1,12 @@
-package ua.kpi.java.lab1;
+package ua.kpi.java.lab1.model;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.function.Predicate;
 
-public final class Model {
+public final class Model implements Serializable {
+  private static final long serialVersionUID = 404733558448371639L;
+
   private final Student[] students;
 
   public Model(Student[] students) {
@@ -25,5 +28,9 @@ public final class Model {
     }
 
     return position != result.length ? Arrays.copyOf(result, position) : result;
+  }
+
+  public Student[] getData() {
+    return students;
   }
 }

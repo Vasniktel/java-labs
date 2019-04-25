@@ -1,8 +1,11 @@
-package ua.kpi.java.lab1;
+package ua.kpi.java.lab1.reader;
 
-public class StaticSource implements DataSource {
+import ua.kpi.java.lab1.model.Person;
+import ua.kpi.java.lab1.model.Student;
+
+public class StaticReader implements DataReader {
   @Override
-  public Student[] getData() {
+  public Student[] readData() {
     return new Student[] {
         new Student(
             1,

@@ -1,4 +1,6 @@
-package ua.kpi.java.lab1;
+package ua.kpi.java.lab1.formatter;
+
+import ua.kpi.java.lab1.model.Student;
 
 public class TableFormatter implements Formatter {
   public static final String FORMAT = "%3s|%5s|%20s|%10s|%15s|%10s\n";

@@ -1,6 +1,9 @@
-package ua.kpi.java.lab1;
+package ua.kpi.java.lab1.model;
+
+import ua.kpi.java.lab1.formatter.TableFormatter;
 
 public final class Student extends Person {
+
   private final int id;
   private final Mark mark;
   private final int year;

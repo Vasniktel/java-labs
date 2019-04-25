@@ -1,6 +1,10 @@
-package ua.kpi.java.lab1;
+package ua.kpi.java.lab1.model;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable {
+  private static final long serialVersionUID = -7401363662787891047L;
+
   protected final String initials;
   protected final Sex sex;
   protected final Origin origin;
