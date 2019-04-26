@@ -6,10 +6,10 @@ import ua.kpi.java.lab4.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDataHandler implements DataHandler<List<Integer>> {
+public class UserDataSource implements DataSource<List<Integer>> {
   private final View view;
 
-  public UserDataHandler(View view) {
+  public UserDataSource(View view) {
     this.view = view;
   }
 
@@ -45,10 +45,5 @@ public class UserDataHandler implements DataHandler<List<Integer>> {
     }
 
     return list;
-  }
-
-  @Override
-  public void putData(List<Integer> data) {
-    throw new UnsupportedOperationException("Data can't be saved yet");
   }
 }
