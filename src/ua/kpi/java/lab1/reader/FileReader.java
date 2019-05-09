@@ -1,5 +1,7 @@
 package ua.kpi.java.lab1.reader;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import ua.kpi.java.lab1.exceptions.FileFormatException;
 import ua.kpi.java.lab1.model.Person;
 import ua.kpi.java.lab1.model.Student;
@@ -10,10 +12,13 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class FileReader implements DataReader {
+  private static final Logger logger = LogManager.getLogger();
+
   private final File file;
   private final String delimiter;
 
   public FileReader(File file, String delimiter) {
+    logger.traceEntry("Parameters: {}, {}", file, delimiter);
     this.file = file;
     this.delimiter = delimiter;
   }
@@ -35,6 +40,7 @@ public class FileReader implements DataReader {
 
   @Override
   public Student[] readData() throws IOException {
+    logger.traceEntry();
     Student[] result = new Student[1];
     int position = 0;
 
@@ -47,9 +53,9 @@ public class FileReader implements DataReader {
         result[position++] = parseLine(position, scanner.nextLine());
       }
     } catch (IllegalArgumentException e) {
-      throw new FileFormatException("Exception while reading from file", e);
+      throw logger.throwing(new FileFormatException("Exception while reading from file", e));
     }
 
-    return position != result.length ? Arrays.copyOf(result, position) : result;
+    return logger.traceExit(position != result.length ? Arrays.copyOf(result, position) : result);
   }
 }
