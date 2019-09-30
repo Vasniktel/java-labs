@@ -4,7 +4,7 @@
   2|    4|     Sherlock Holmes|      MALE|      FOREIGNER|     GREAT
   3|    1|         John Watson|      MALE|      FOREIGNER|      FINE
   4|    2|          Ms. Hudson|    FEMALE|         NATIVE|      FINE
-  5|    3|    Albert Einshtein|      MALE|         NATIVE|     GREAT
+  5|    3|     Albert Einstein|      MALE|         NATIVE|     GREAT
   6|    5| Neil deGrasse Tyson|      MALE|      FOREIGNER|     GREAT
   7|    2| Andrei Alexandrescu|      MALE|      FOREIGNER|      FINE
   8|    3|           Elon Mask|      MALE|         NATIVE|     GREAT
